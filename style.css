@@ -1,1082 +1,675 @@
-/* ==================================================
-   DESIGN SYSTEM
-================================================== */
+<!DOCTYPE html>
+<html lang="en">
 
-:root {
+<head>
 
-    --white: #ffffff;
-    --page: #f5f5f7;
+    <meta charset="UTF-8">
 
-    --text: #1d1d1f;
-    --secondary: #6e6e73;
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    --blue: #0071e3;
-    --blue-hover: #0077ed;
+    <title>
+        Jaron | Computer Engineering & Embedded Systems
+    </title>
 
-    --dark: #000000;
+    <meta
+        name="description"
+        content="Jaron's Computer Engineering portfolio featuring embedded systems, electronics, PCB design, firmware, robotics, and hardware product development."
+    >
 
-    --radius-large: 30px;
-    --radius-medium: 22px;
+    <meta
+        name="author"
+        content="Jaron"
+    >
 
-    --max-width: 1440px;
-}
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
+    <!-- KEEP YOUR REAL GOOGLE VERIFICATION CODE HERE -->
+    <meta
+        name="google-site-verification"
+        content="YOUR-EXISTING-GOOGLE-VERIFICATION-CODE"
+    >
 
-/* ==================================================
-   RESET
-================================================== */
+    <link
+        rel="canonical"
+        href="https://electricjec.github.io/"
+    >
 
-* {
-    box-sizing: border-box;
-}
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
-html {
-    scroll-behavior: smooth;
-}
+</head>
 
-body {
-    margin: 0;
 
-    background: var(--white);
+<body>
 
-    color: var(--text);
 
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "SF Pro Display",
-        "SF Pro Text",
-        "Segoe UI",
-        Helvetica,
-        Arial,
-        sans-serif;
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-    -webkit-font-smoothing: antialiased;
-}
+    <header class="site-header">
 
-img {
-    display: block;
+        <nav class="navbar">
 
-    max-width: 100%;
-}
+            <a
+                href="#home"
+                class="brand"
+            >
+                Jaron
+            </a>
 
-a {
-    color: inherit;
 
-    text-decoration: none;
-}
+            <div class="nav-links">
 
-h1,
-h2,
-h3,
-p {
-    margin-top: 0;
-}
+                <a href="#projects">
+                    Projects
+                </a>
 
+                <a href="#pcb">
+                    PCB
+                </a>
 
-/* ==================================================
-   NAVIGATION
-================================================== */
+                <a href="#about">
+                    About
+                </a>
 
-.site-header {
-    position: sticky;
+                <a href="#contact">
+                    Contact
+                </a>
 
-    top: 0;
+            </div>
 
-    z-index: 1000;
+        </nav>
 
-    background: rgba(255, 255, 255, 0.78);
+    </header>
 
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
 
-.navbar {
-    width: min(92%, 1200px);
+    <main>
 
-    height: 52px;
 
-    margin: auto;
+        <!-- =========================
+             HERO
+        ========================== -->
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+        <section
+            class="hero"
+            id="home"
+        >
 
-.brand {
-    font-size: 17px;
+            <div class="hero-copy">
 
-    font-weight: 600;
+                <p class="eyebrow">
+                    COMPUTER ENGINEERING
+                </p>
 
-    letter-spacing: -0.3px;
-}
+                <h1>
+                    I design and build<br>
+                    physical technology.
+                </h1>
 
-.nav-links {
-    display: flex;
+                <p class="hero-subtitle">
+                    Embedded systems, electronics, firmware,
+                    PCB design, robotics, and products built
+                    from the circuit up.
+                </p>
 
-    gap: 32px;
-}
 
-.nav-links a {
-    color: #333336;
+                <div class="hero-actions">
 
-    font-size: 12px;
+                    <a
+                        class="primary-button"
+                        href="#projects"
+                    >
+                        Explore my work
+                    </a>
 
-    transition: opacity 0.2s ease;
-}
+                    <a
+                        class="secondary-link"
+                        href="#about"
+                    >
+                        About me
+                        <span>›</span>
+                    </a>
 
-.nav-links a:hover {
-    opacity: 0.55;
-}
+                </div>
 
+            </div>
 
-/* ==================================================
-   GENERAL
-================================================== */
 
-.eyebrow {
-    margin-bottom: 18px;
 
-    color: var(--secondary);
+            <div class="hero-product">
 
-    font-size: 13px;
-    font-weight: 600;
+                <img
+                    src="assets/images/emer-internal.jpg"
+                    alt="Internal circuitry of the Emergency Messenger"
+                >
 
-    letter-spacing: 0.08em;
+            </div>
 
-    text-transform: uppercase;
-}
 
+            <div class="hero-caption">
 
-/* ==================================================
-   HERO
-================================================== */
+                <span>
+                    Emergency Messenger
+                </span>
 
-.hero {
-    position: relative;
+                <span>
+                    Embedded hardware · 2026
+                </span>
 
-    overflow: hidden;
+            </div>
 
-    padding:
-        110px
-        6vw
-        0;
+        </section>
 
-    text-align: center;
 
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f8f8fa 100%
-        );
-}
 
-.hero-copy {
-    position: relative;
+        <!-- =========================
+             PROJECTS
+        ========================== -->
 
-    z-index: 2;
+        <section
+            class="projects-section"
+            id="projects"
+        >
 
-    max-width: 1050px;
 
-    margin: auto;
-}
+            <!-- =====================
+                 COSHĒ
+            ====================== -->
 
-.hero h1 {
-    margin-bottom: 28px;
+            <article class="product-feature coshe-feature">
 
-    font-size: clamp(60px, 7vw, 112px);
+                <div class="product-copy centered-copy">
 
-    font-weight: 600;
+                    <p class="product-label">
+                        coshē
+                    </p>
 
-    line-height: 0.94;
+                    <h2>
+                        Reading, made pocket-sized.
+                    </h2>
 
-    letter-spacing: -0.055em;
-}
+                    <p class="product-description">
+                        An offline ESP32-S3 e-reader with custom
+                        firmware, physical controls, microSD storage,
+                        and local Wi-Fi book transfer.
+                    </p>
 
-.hero-subtitle {
-    max-width: 700px;
 
-    margin:
-        0
-        auto
-        35px;
+                    <div class="product-actions">
 
-    color: var(--secondary);
+                        <span>
+                            ESP32-S3
+                        </span>
 
-    font-size: clamp(19px, 2vw, 26px);
+                        <span>
+                            C++
+                        </span>
 
-    line-height: 1.35;
+                        <span>
+                            Embedded UI
+                        </span>
 
-    letter-spacing: -0.02em;
-}
+                    </div>
 
-.hero-actions {
-    display: flex;
+                </div>
 
-    justify-content: center;
-    align-items: center;
 
-    gap: 26px;
+                <div class="large-product-image">
 
-    margin-bottom: 65px;
-}
+                    <img
+                        src="assets/images/coshe1.jpg"
+                        alt="coshē PocketReader"
+                    >
 
+                </div>
 
-/* BUTTONS */
+            </article>
 
-.primary-button {
-    padding: 12px 21px;
 
-    background: var(--blue);
 
-    color: var(--white);
+            <!-- =====================
+                 TWO COLUMN GRID
+            ====================== -->
 
-    border-radius: 999px;
+            <div class="product-grid">
 
-    font-size: 16px;
 
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
-}
+                <!-- ANTIPARALLEL -->
 
-.primary-button:hover {
-    background: var(--blue-hover);
+                <article class="product-tile">
 
-    transform: translateY(-1px);
-}
+                    <div class="tile-copy">
 
-.secondary-link {
-    color: var(--blue);
+                        <p class="product-label">
+                            ANTIPARALLEL
+                        </p>
 
-    font-size: 17px;
-}
+                        <h2>
+                            Analog heart.<br>
+                            Digital awareness.
+                        </h2>
 
-.secondary-link span {
-    margin-left: 4px;
-}
+                        <p>
+                            A custom overdrive pedal built around
+                            analog op-amp circuitry, selectable
+                            clipping modes, PCB design, and digital
+                            parameter monitoring.
+                        </p>
 
+                    </div>
 
-/* HERO PRODUCT */
 
-.hero-product {
-    width: min(1100px, 90vw);
+                    <div class="tile-image">
 
-    height: min(650px, 60vw);
+                        <img
+                            src="assets/images/antiparallel1.jpg"
+                            alt="ANTIPARALLEL guitar overdrive pedal"
+                        >
 
-    margin: auto;
+                    </div>
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+                </article>
 
-    overflow: hidden;
-}
 
-.hero-product img {
-    width: 100%;
-    height: 100%;
 
-    object-fit: contain;
-    object-position: center bottom;
+                <!-- EMERGENCY MESSENGER -->
 
-    filter:
-        drop-shadow(
-            0
-            30px
-            45px
-            rgba(0, 0, 0, 0.12)
-        );
-}
+                <article class="product-tile">
 
-.hero-caption {
-    width: min(100%, 1180px);
+                    <div class="tile-copy">
 
-    margin: auto;
+                        <p class="product-label">
+                            Emergency Messenger
+                        </p>
 
-    padding: 20px 0 30px;
+                        <h2>
+                            Communication<br>
+                            beyond Wi-Fi.
+                        </h2>
 
-    display: flex;
-    justify-content: space-between;
+                        <p>
+                            A portable embedded communication
+                            device integrating cellular messaging,
+                            GPS, navigation, and a custom touch
+                            interface.
+                        </p>
 
-    color: var(--secondary);
+                    </div>
 
-    font-size: 12px;
-}
 
+                    <div class="tile-image">
 
-/* ==================================================
-   PROJECT AREA
-================================================== */
+                        <img
+                            src="assets/images/emer1.jpg"
+                            alt="Emergency Messenger device"
+                        >
 
-.projects-section {
-    padding: 12px;
+                    </div>
 
-    background: var(--white);
-}
+                </article>
 
+            </div>
 
-/* ==================================================
-   LARGE PRODUCT FEATURE
-================================================== */
 
-.product-feature {
-    min-height: 850px;
 
-    margin-bottom: 12px;
+            <!-- =====================
+                 WATERSTRIP ROBOT
+            ====================== -->
 
-    overflow: hidden;
+            <article class="product-feature robot-feature">
 
-    position: relative;
+                <div class="product-copy centered-copy">
 
-    display: flex;
-    flex-direction: column;
+                    <p class="product-label">
+                        Waterstrip Robot
+                    </p>
 
-    background: var(--page);
+                    <h2>
+                        Motion, programmed.
+                    </h2>
 
-    border-radius: 4px;
-}
+                    <p class="product-description">
+                        An ATmega328P-based robotic system using
+                        multiple servo motors, timer-driven control,
+                        and automated mechanical sequences.
+                    </p>
 
-.centered-copy {
-    max-width: 850px;
 
-    margin: 0 auto;
+                    <div class="product-actions">
 
-    padding:
-        80px
-        30px
-        15px;
+                        <span>
+                            ATmega328P
+                        </span>
 
-    text-align: center;
+                        <span>
+                            AVR C
+                        </span>
 
-    position: relative;
+                        <span>
+                            Servo Control
+                        </span>
 
-    z-index: 2;
-}
+                    </div>
 
-.product-label {
-    margin-bottom: 10px;
+                </div>
 
-    font-size: 24px;
-    font-weight: 600;
 
-    letter-spacing: -0.03em;
-}
+                <div class="large-product-image robot-image">
 
-.product-copy h2,
-.tile-copy h2 {
-    margin-bottom: 16px;
+                    <img
+                        src="assets/images/waterstriprobot1.jpg"
+                        alt="Waterstrip Robot"
+                    >
 
-    font-size: clamp(44px, 5vw, 72px);
+                </div>
 
-    font-weight: 600;
+            </article>
 
-    line-height: 1;
 
-    letter-spacing: -0.045em;
-}
 
-.product-description {
-    max-width: 650px;
+            <!-- =====================
+                 SOLAR CLEANING ROBOT
+            ====================== -->
 
-    margin:
-        0
-        auto
-        24px;
+            <article class="product-feature cleaner-feature">
 
-    color: var(--secondary);
+                <div class="product-copy centered-copy">
 
-    font-size: 19px;
+                    <p class="product-label">
+                        Solar Cleaning Robot
+                    </p>
 
-    line-height: 1.45;
-}
+                    <h2>
+                        Sweep. Mop. Disinfect.<br>
+                        Powered by the sun.
+                    </h2>
 
-.product-actions {
-    display: flex;
+                    <p class="product-description">
+                        An Arduino-based autonomous cleaning robot
+                        combining sweeping and mopping mechanisms,
+                        automatic water dispensing for mop disinfection,
+                        solar-assisted charging, and wireless on/off
+                        control through a locally hosted ESP32 website.
+                    </p>
 
-    justify-content: center;
-    flex-wrap: wrap;
 
-    gap: 8px;
-}
+                    <div class="product-actions">
 
-.product-actions span {
-    padding: 8px 13px;
+                        <span>
+                            Arduino
+                        </span>
 
-    background: rgba(0, 0, 0, 0.05);
+                        <span>
+                            ESP32
+                        </span>
 
-    border-radius: 999px;
+                        <span>
+                            Solar Charging
+                        </span>
 
-    color: #525257;
+                        <span>
+                            Web Control
+                        </span>
 
-    font-size: 12px;
-}
+                        <span>
+                            Motor Control
+                        </span>
 
-.large-product-image {
-    flex: 1;
+                        <span>
+                            Water Dispensing
+                        </span>
 
-    min-height: 500px;
+                    </div>
 
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+                </div>
 
-    overflow: hidden;
-}
 
-.large-product-image img {
-    width: min(900px, 86%);
+                <div class="large-product-image cleaner-image">
 
-    height: 100%;
+                    <img
+                        src="assets/images/solarcleaner1.jpg"
+                        alt="Solar-powered Arduino cleaning robot with sweep and mop mechanism"
+                    >
 
-    object-fit: contain;
-    object-position: center bottom;
+                </div>
 
-    transition: transform 0.8s ease;
-}
+            </article>
 
-.product-feature:hover .large-product-image img {
-    transform: scale(1.015);
-}
+        </section>
 
 
-/* ==================================================
-   TWO COLUMN PRODUCT GRID
-================================================== */
 
-.product-grid {
-    display: grid;
+        <!-- =========================
+             PCB DESIGN
+        ========================== -->
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+        <section
+            class="pcb-section"
+            id="pcb"
+        >
 
-    gap: 12px;
+            <div class="pcb-heading">
 
-    margin-bottom: 12px;
-}
+                <p class="eyebrow">
+                    PCB DESIGN & FABRICATION
+                </p>
 
-.product-tile {
-    min-height: 780px;
+                <h2>
+                    From digital layout<br>
+                    to finished hardware.
+                </h2>
 
-    position: relative;
+                <p>
+                    I develop manufacturing-ready printed circuit
+                    boards through schematic capture, component
+                    placement, routing, copper pours, design-rule
+                    checking, Gerber generation, assembly, and testing.
+                </p>
 
-    overflow: hidden;
+            </div>
 
-    display: flex;
-    flex-direction: column;
 
-    background: var(--page);
-}
 
-.tile-copy {
-    position: relative;
+            <div class="pcb-showcase">
 
-    z-index: 2;
 
-    padding:
-        65px
-        55px
-        10px;
+                <!-- EASYEDA -->
 
-    text-align: center;
-}
+                <div class="pcb-card">
 
-.tile-copy h2 {
-    font-size: clamp(38px, 3.5vw, 58px);
-}
+                    <div class="pcb-card-copy">
 
-.tile-copy > p:last-child {
-    max-width: 520px;
+                        <span>
+                            01
+                        </span>
 
-    margin:
-        0
-        auto;
+                        <h3>
+                            EasyEDA
+                        </h3>
 
-    color: var(--secondary);
+                        <p>
+                            Schematic capture, component placement,
+                            multilayer routing, copper pours,
+                            design-rule checks, and fabrication output.
+                        </p>
 
-    font-size: 17px;
+                    </div>
 
-    line-height: 1.5;
-}
 
-.tile-image {
-    flex: 1;
+                    <div class="pcb-card-image">
 
-    min-height: 390px;
+                        <img
+                            src="assets/images/pcb-easyeda.jpg"
+                            alt="PCB layout designed in EasyEDA"
+                        >
 
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+                    </div>
 
-    overflow: hidden;
-}
+                </div>
 
-.tile-image img {
-    width: 88%;
-    height: 100%;
 
-    object-fit: contain;
-    object-position: center bottom;
 
-    transition: transform 0.7s ease;
-}
+                <!-- PROFESSIONAL FABRICATION -->
 
-.product-tile:hover .tile-image img {
-    transform: scale(1.02);
-}
+                <div class="pcb-card">
 
+                    <div class="pcb-card-copy">
 
-/* ==================================================
-   ROBOT
-================================================== */
+                        <span>
+                            02
+                        </span>
 
-.robot-feature {
-    background:
-        linear-gradient(
-            180deg,
-            #f5f5f7 0%,
-            #ffffff 100%
-        );
-}
+                        <h3>
+                            Professional Fabrication
+                        </h3>
 
-.robot-image img {
-    max-width: 850px;
-}
+                        <p>
+                            Manufacturing-ready Gerbers and board
+                            designs prepared for professional PCB
+                            production through JLCPCB and PCBWay.
+                        </p>
 
-/* ==================================================
-   SOLAR CLEANING ROBOT
-================================================== */
+                    </div>
 
-.cleaner-feature {
-    background:
-        linear-gradient(
-            180deg,
-            #f7faf7 0%,
-            #eef5ef 100%
-        );
-}
 
-.cleaner-image img {
-    max-width: 950px;
-}
+                    <div class="pcb-card-image">
 
+                        <img
+                            src="assets/images/pcb-fab.jpg"
+                            alt="Professionally manufactured PCB"
+                        >
 
-/* ==================================================
-   PCB SECTION
-================================================== */
+                    </div>
 
-.pcb-section {
-    padding:
-        140px
-        6vw;
+                </div>
 
-    background: #ffffff;
-}
+            </div>
 
-.pcb-heading {
-    max-width: 1100px;
+        </section>
 
-    margin:
-        0
-        auto
-        80px;
 
-    text-align: center;
-}
 
-.pcb-heading h2 {
-    margin-bottom: 25px;
+        <!-- =========================
+             ABOUT
+        ========================== -->
 
-    font-size: clamp(52px, 6vw, 88px);
+        <section
+            class="about-section"
+            id="about"
+        >
 
-    font-weight: 600;
+            <p class="eyebrow">
+                ABOUT
+            </p>
 
-    line-height: 0.98;
 
-    letter-spacing: -0.055em;
-}
+            <h2>
+                Building hardware is where
+                engineering becomes tangible.
+            </h2>
 
-.pcb-heading > p:last-child {
-    max-width: 690px;
 
-    margin: auto;
+            <p class="about-body">
+                I'm Jaron, a Computer Engineering student focused
+                on embedded systems, electronics, firmware,
+                PCB design, robotics, and developing physical
+                products from early prototypes to working hardware.
+            </p>
 
-    color: var(--secondary);
 
-    font-size: 20px;
+            <div class="skills">
 
-    line-height: 1.5;
-}
+                <span>
+                    Embedded Systems
+                </span>
 
+                <span>
+                    Electronics
+                </span>
 
-/* PCB GRID */
+                <span>
+                    PCB Design
+                </span>
 
-.pcb-showcase {
-    max-width: var(--max-width);
+                <span>
+                    Firmware
+                </span>
 
-    margin: auto;
+                <span>
+                    Robotics
+                </span>
 
-    display: grid;
+                <span>
+                    Product Development
+                </span>
 
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+            </div>
 
-    gap: 18px;
-}
+        </section>
 
-.pcb-card {
-    min-height: 650px;
 
-    overflow: hidden;
 
-    position: relative;
+        <!-- =========================
+             CONTACT
+        ========================== -->
 
-    display: flex;
-    flex-direction: column;
+        <section
+            class="contact-section"
+            id="contact"
+        >
 
-    background: var(--page);
+            <p class="eyebrow">
+                CONTACT
+            </p>
 
-    border-radius: var(--radius-medium);
-}
+            <h2>
+                Let's build something.
+            </h2>
 
-.pcb-card-copy {
-    padding:
-        45px
-        45px
-        20px;
-}
+            <a
+                class="contact-link"
+                href="mailto:your-email@example.com"
+            >
+                your-email@example.com
+                <span>↗</span>
+            </a>
 
-.pcb-card-copy > span {
-    display: block;
+        </section>
 
-    margin-bottom: 18px;
 
-    color: var(--secondary);
+    </main>
 
-    font-size: 12px;
-}
 
-.pcb-card-copy h3 {
-    margin-bottom: 12px;
 
-    font-size: 38px;
-    font-weight: 600;
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-    letter-spacing: -0.04em;
-}
+    <footer>
 
-.pcb-card-copy p {
-    max-width: 500px;
+        <span>
+            © 2026 Jaron
+        </span>
 
-    color: var(--secondary);
+        <span>
+            Computer Engineering · Philippines
+        </span>
 
-    font-size: 16px;
+    </footer>
 
-    line-height: 1.5;
-}
 
-.pcb-card-image {
-    flex: 1;
+    <script src="script.js"></script>
 
-    min-height: 360px;
+</body>
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    overflow: hidden;
-}
-
-.pcb-card-image img {
-    width: 90%;
-    height: 90%;
-
-    object-fit: contain;
-
-    transition: transform 0.6s ease;
-}
-
-.pcb-card:hover .pcb-card-image img {
-    transform: scale(1.025);
-}
-
-
-/* ==================================================
-   ABOUT
-================================================== */
-
-.about-section {
-    padding:
-        170px
-        8vw;
-
-    background: var(--page);
-}
-
-.about-section > * {
-    max-width: 1200px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.about-section h2 {
-    margin-bottom: 40px;
-
-    font-size: clamp(54px, 6vw, 92px);
-
-    font-weight: 600;
-
-    line-height: 0.98;
-
-    letter-spacing: -0.055em;
-}
-
-.about-body {
-    max-width: 800px;
-
-    margin-left: 0;
-
-    color: var(--secondary);
-
-    font-size: 22px;
-
-    line-height: 1.5;
-}
-
-.skills {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-
-    margin-top: 45px;
-}
-
-.skills span {
-    padding:
-        10px
-        15px;
-
-    background: #ffffff;
-
-    border-radius: 999px;
-
-    color: #525257;
-
-    font-size: 13px;
-}
-
-
-/* ==================================================
-   CONTACT
-================================================== */
-
-.contact-section {
-    padding:
-        170px
-        8vw;
-
-    text-align: center;
-
-    background: #ffffff;
-}
-
-.contact-section h2 {
-    margin-bottom: 38px;
-
-    font-size: clamp(58px, 7vw, 105px);
-
-    font-weight: 600;
-
-    line-height: 0.95;
-
-    letter-spacing: -0.06em;
-}
-
-.contact-link {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 8px;
-
-    color: var(--blue);
-
-    font-size: 20px;
-}
-
-
-/* ==================================================
-   FOOTER
-================================================== */
-
-footer {
-    padding:
-        24px
-        6vw;
-
-    display: flex;
-    justify-content: space-between;
-
-    background: var(--page);
-
-    color: var(--secondary);
-
-    font-size: 11px;
-}
-
-
-/* ==================================================
-   SCROLL REVEAL
-================================================== */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(30px);
-
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.reveal.visible {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* ==================================================
-   TABLET
-================================================== */
-
-@media (max-width: 1000px) {
-
-    .hero {
-        padding-top: 90px;
-    }
-
-    .hero h1 {
-        font-size: clamp(55px, 9vw, 90px);
-    }
-
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .product-tile {
-        min-height: 750px;
-    }
-
-    .pcb-showcase {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 700px) {
-
-    .navbar {
-        width: calc(100% - 36px);
-    }
-
-    .nav-links {
-        gap: 16px;
-    }
-
-    .nav-links a {
-        font-size: 11px;
-    }
-
-
-    /* HERO */
-
-    .hero {
-        padding:
-            80px
-            20px
-            0;
-    }
-
-    .hero h1 {
-        font-size: 52px;
-
-        letter-spacing: -0.05em;
-    }
-
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
-    .hero-actions {
-        margin-bottom: 40px;
-    }
-
-    .hero-product {
-        width: 100%;
-
-        height: 420px;
-    }
-
-    .hero-caption {
-        gap: 20px;
-
-        font-size: 10px;
-    }
-
-
-    /* PRODUCTS */
-
-    .projects-section {
-        padding: 8px;
-    }
-
-    .product-feature {
-        min-height: 700px;
-
-        margin-bottom: 8px;
-    }
-
-    .centered-copy {
-        padding:
-            60px
-            22px
-            10px;
-    }
-
-    .product-label {
-        font-size: 20px;
-    }
-
-    .product-copy h2 {
-        font-size: 46px;
-    }
-
-    .product-description {
-        font-size: 16px;
-    }
-
-    .large-product-image {
-        min-height: 380px;
-    }
-
-    .product-grid {
-        gap: 8px;
-
-        margin-bottom: 8px;
-    }
-
-    .product-tile {
-        min-height: 680px;
-    }
-
-    .tile-copy {
-        padding:
-            55px
-            25px
-            10px;
-    }
-
-    .tile-copy h2 {
-        font-size: 42px;
-    }
-
-    .tile-copy > p:last-child {
-        font-size: 15px;
-    }
-
-
-    /* PCB */
-
-    .pcb-section {
-        padding:
-            100px
-            20px;
-    }
-
-    .pcb-heading {
-        margin-bottom: 50px;
-    }
-
-    .pcb-heading h2 {
-        font-size: 52px;
-    }
-
-    .pcb-heading > p:last-child {
-        font-size: 17px;
-    }
-
-    .pcb-showcase {
-        gap: 12px;
-    }
-
-    .pcb-card {
-        min-height: 540px;
-
-        border-radius: 18px;
-    }
-
-    .pcb-card-copy {
-        padding:
-            32px
-            28px
-            15px;
-    }
-
-    .pcb-card-copy h3 {
-        font-size: 32px;
-    }
-
-
-    /* ABOUT */
-
-    .about-section {
-        padding:
-            110px
-            25px;
-    }
-
-    .about-section h2 {
-        font-size: 52px;
-    }
-
-    .about-body {
-        font-size: 18px;
-    }
-
-
-    /* CONTACT */
-
-    .contact-section {
-        padding:
-            120px
-            25px;
-    }
-
-    .contact-section h2 {
-        font-size: 58px;
-    }
-
-
-    /* FOOTER */
-
-    footer {
-        flex-direction: column;
-
-        gap: 8px;
-
-        padding:
-            24px
-            25px;
-    }
-
-}
+</html>
