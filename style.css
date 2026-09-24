@@ -545,6 +545,23 @@ p {
     max-width: 850px;
 }
 
+/* ==================================================
+   SOLAR CLEANING ROBOT
+================================================== */
+
+.cleaner-feature {
+    background:
+        linear-gradient(
+            180deg,
+            #f7faf7 0%,
+            #eef5ef 100%
+        );
+}
+
+.cleaner-image img {
+    max-width: 950px;
+}
+
 
 /* ==================================================
    PCB SECTION
