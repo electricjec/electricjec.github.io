@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>coshē PocketReader | Jaron Canceran</title>
+<meta name="description" content="Case study of coshē, an ESP32-S3 pocket reader with custom firmware, microSD storage, physical controls, and local Wi-Fi book transfer.">
+<meta name="author" content="Jaron Canceran">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://electricjec.github.io/projects/coshe.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+<header class="site-header"><nav class="navbar"><a href="../index.html" class="brand">Jaron Canceran</a><div class="nav-links"><a href="../index.html#projects">Projects</a><a href="../index.html#pcb">PCB</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div></nav></header>
+<main class="project-page">
+<section class="case-hero"><div class="case-container">
+<a class="case-back" href="../index.html#projects">‹ All projects</a>
+<p class="case-kicker">Embedded systems · Firmware · Product design</p>
+<h1>coshē PocketReader</h1>
+<p class="case-lead">A pocket-sized dedicated reader built around offline storage, physical controls, and a custom firmware experience.</p>
+<div class="case-tags"><span>ESP32-S3</span><span>C++</span><span>Embedded UI</span><span>microSD</span><span>Wi-Fi</span></div>
+<div class="case-hero-media"><img src="../assets/images/coshe1.png" alt="coshē PocketReader project"></div>
+</div></section>
+
+<section class="case-section"><div class="case-container">
+<div class="overview-grid"><div class="case-heading"><p class="case-kicker">Overview</p><h2>A reading device built around focus rather than general-purpose computing.</h2></div><div class="case-copy"><p>coshē is a handheld e-reader built around an ESP32-S3, a 2.8-inch display, microSD storage, physical navigation buttons, and a rechargeable battery system.</p><p>The project grew from basic hardware bring-up into a full reading workflow: library browsing, book import, pagination, progress tracking, themes, and a local Wi-Fi uploader.</p><p>The goal is a self-contained device that can receive books from a browser and then operate offline as a dedicated reader.</p></div></div>
+<div class="meta-grid"><div class="meta-item"><span>TYPE</span><strong>Pocket e-reader</strong></div><div class="meta-item"><span>CONTROLLER</span><strong>ESP32-S3</strong></div><div class="meta-item"><span>DISPLAY</span><strong>2.8-inch SPI TFT</strong></div><div class="meta-item"><span>STORAGE</span><strong>microSD</strong></div><div class="meta-item"><span>TRANSFER</span><strong>Local Wi-Fi web uploader</strong></div><div class="meta-item"><span>INPUT</span><strong>Physical buttons</strong></div></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">System</p><h2>A small reader built around a complete offline workflow.</h2><p class="section-lead">The device combines embedded hardware, local storage, physical controls, and a custom reading interface rather than depending on a companion app.</p></div>
+<div class="feature-grid"><article class="feature-card"><span class="feature-index">01</span><h3>ESP32-S3</h3><p>The controller handles the display, storage, interface, Wi-Fi transfer workflow, and reading logic.</p></article><article class="feature-card"><span class="feature-index">02</span><h3>Local library</h3><p>Books live on microSD and remain available offline after transfer.</p></article><article class="feature-card"><span class="feature-index">03</span><h3>Physical interface</h3><p>Dedicated buttons keep page navigation and menu actions tactile and predictable.</p></article></div>
+<div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Device UI / library carousel</h3><p class="placeholder-file">Suggested file: coshe-library.png</p></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading"><p class="case-kicker">Book transfer</p><h2>No companion app required.</h2><p class="section-lead">coshē can create its own local Wi-Fi access point and expose a browser-based uploader for bringing books onto the device.</p></div>
+<div class="copy-grid"><div><h3>Local web uploader</h3><p>A nearby phone or computer can connect directly to the reader and use a local webpage for book transfer.</p></div><div><h3>Browser preprocessing</h3><p>The import workflow can preprocess EPUB structure before content is stored for reading on the embedded device.</p></div></div>
+<div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Wi-Fi uploader shown on phone or laptop</h3><p class="placeholder-file">Suggested file: coshe-uploader.png</p></div>
+</div></section>
+
+<section class="case-section dark"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Reading interface</p><h2>Designed to feel like a dedicated object, not a tiny general-purpose computer.</h2><p class="section-lead">The interface centers on the current book, a compact library, readable typography, progress tracking, and simple controls.</p></div>
+<div class="media-placeholder dark-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Reading screen + chapter / progress UI</h3><p class="placeholder-file">Suggested file: coshe-reading-ui.png</p></div>
+<div class="feature-grid"><article class="feature-card"><span class="feature-index">01</span><h3>Current book first</h3><p>The latest book stays prominent rather than forcing the user through a separate continue screen.</p></article><article class="feature-card"><span class="feature-index">02</span><h3>Reading progress</h3><p>Page position and reading percentage are stored as part of the reading experience.</p></article><article class="feature-card"><span class="feature-index">03</span><h3>Paper-first UI</h3><p>Typography and layout are tuned around long-form reading rather than app-style interaction.</p></article></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Development</p><h2>Firmware, enclosure, storage, and power had to mature together.</h2></div>
+<div class="process-list"><div class="process-row"><span>01</span><div><h3>Bring-up</h3><p>Verify the display, buttons, and microSD independently before combining them.</p></div></div><div class="process-row"><span>02</span><div><h3>Reader engine</h3><p>Load text from storage, wrap and paginate it, then implement forward/back navigation.</p></div></div><div class="process-row"><span>03</span><div><h3>Library UI</h3><p>Build the carousel, cover handling, recent-book behavior, and management screens.</p></div></div><div class="process-row"><span>04</span><div><h3>Transfer workflow</h3><p>Add the local Wi-Fi uploader so books can be imported without a dedicated app.</p></div></div><div class="process-row"><span>05</span><div><h3>Refinement</h3><p>Improve progress persistence, responsiveness, power behavior, and visual consistency.</p></div></div></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Gallery plan</p><h2>What to photograph next.</h2></div><div class="gallery-grid"><div class="media-block "><img src="../assets/images/coshe1.png" alt="coshē PocketReader"></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Rear / side hardware view</h3><p class="placeholder-file">Suggested file: coshe-hardware.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Internal electronics / PCB view</h3><p class="placeholder-file">Suggested file: coshe-internal.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Library carousel close-up</h3><p class="placeholder-file">Suggested file: coshe-carousel.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Reading screen close-up</h3><p class="placeholder-file">Suggested file: coshe-reading.png</p></div></div></div></section>
+
+<section class="learning"><div class="case-container"><p class="case-kicker">What I learned</p><h2>The interface is part of the hardware.</h2><p>coshē reinforced that embedded product design is not only about connecting modules. Firmware architecture, storage behavior, interaction, typography, power, and enclosure constraints all shape how the hardware feels.</p><p>The strongest improvements came from treating the reader as one product rather than a collection of separate embedded features.</p></div></section>
+<section class="next-project"><div class="case-container"><p class="case-kicker">Next project</p><a class="next-link" href="emergency-messenger.html"><span>Emergency Messenger</span><strong>Communication beyond Wi-Fi.</strong><span class="next-arrow">→</span></a></div></section>
+</main>
+<footer><span>© 2026 Jaron Christopher Canceran</span><span>Computer Engineering · Hardware · Embedded Systems</span></footer>
+<script src="../script.js"></script>
+</body>
+</html>

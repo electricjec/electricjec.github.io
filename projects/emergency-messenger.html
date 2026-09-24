@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Messenger | Jaron Canceran</title>
+<meta name="description" content="Case study of a portable embedded Emergency Messenger integrating cellular SMS, GPS, navigation, touchscreen UI, and portable power.">
+<meta name="author" content="Jaron Canceran">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://electricjec.github.io/projects/emergency-messenger.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+<header class="site-header"><nav class="navbar"><a href="../index.html" class="brand">Jaron Canceran</a><div class="nav-links"><a href="../index.html#projects">Projects</a><a href="../index.html#pcb">PCB</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div></nav></header>
+<main class="project-page">
+<section class="case-hero"><div class="case-container">
+<a class="case-back" href="../index.html#projects">‹ All projects</a>
+<p class="case-kicker">Embedded systems · Cellular · GPS</p>
+<h1>Emergency Messenger</h1>
+<p class="case-lead">A portable communication device combining cellular messaging, GPS location, and a custom touchscreen interface.</p>
+<div class="case-tags"><span>Cellular</span><span>GPS</span><span>ESP32</span><span>Touch UI</span><span>Portable Power</span></div>
+<div class="case-hero-media"><img src="../assets/images/emer1.jpeg" alt="Emergency Messenger project"></div>
+</div></section>
+
+<section class="case-section"><div class="case-container">
+<div class="overview-grid"><div class="case-heading"><p class="case-kicker">Overview</p><h2>Communication hardware shaped into a usable handheld device.</h2></div><div class="case-copy"><p>The Emergency Messenger was developed as a portable embedded device for communication and location features outside a normal Wi-Fi-dependent workflow.</p><p>It integrates cellular messaging, GPS, a touchscreen interface, and battery operation into a single enclosure.</p><p>Much of the engineering work came from making asynchronous communication, UI state, location data, touch input, and power behavior coexist reliably.</p></div></div>
+<div class="meta-grid"><div class="meta-item"><span>TYPE</span><strong>Portable communication device</strong></div><div class="meta-item"><span>NETWORK</span><strong>Cellular SMS</strong></div><div class="meta-item"><span>LOCATION</span><strong>GPS</strong></div><div class="meta-item"><span>INTERFACE</span><strong>2.8-inch touch display</strong></div><div class="meta-item"><span>FOCUS</span><strong>Messaging + navigation</strong></div><div class="meta-item"><span>POWER</span><strong>Rechargeable portable system</strong></div></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">System architecture</p><h2>A portable interface around cellular messaging and location.</h2><p class="section-lead">The device combines a microcontroller, cellular modem, GPS receiver, touchscreen display, and portable power system.</p></div>
+<div class="feature-grid"><article class="feature-card"><span class="feature-index">01</span><h3>Cellular messaging</h3><p>The modem provides SMS communication without relying on a nearby Wi-Fi network.</p></article><article class="feature-card"><span class="feature-index">02</span><h3>GPS location</h3><p>A dedicated GPS receiver adds location data for navigation and location-sharing features.</p></article><article class="feature-card"><span class="feature-index">03</span><h3>Touch interface</h3><p>The display turns the electronics into a handheld messaging device rather than a collection of serial modules.</p></article></div>
+<div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">System block diagram / internal hardware</h3><p class="placeholder-file">Suggested file: emergency-internal.png</p></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading"><p class="case-kicker">Interface</p><h2>Phone-like interaction on embedded hardware.</h2><p class="section-lead">The interface was designed around quick access to messaging, navigation, notifications, time, and device status.</p></div>
+<div class="media-pair"><div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Home / lock screen</h3><p class="placeholder-file">Suggested file: emergency-home-ui.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Messages conversation screen</h3><p class="placeholder-file">Suggested file: emergency-messages-ui.png</p></div></div>
+</div></section>
+
+<section class="case-section dark"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Field behavior</p><h2>Real hardware forced the software to deal with imperfect networks and power conditions.</h2><p class="section-lead">Testing exposed restart behavior, duplicated messages, intermittent network features, touch calibration issues, and the need for more defensive firmware.</p></div>
+<div class="media-placeholder dark-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Outdoor / field-use photo</h3><p class="placeholder-file">Suggested file: emergency-field-test.png</p></div>
+<div class="copy-grid"><div><h3>Connectivity</h3><p>Cellular communication provides the long-range link while GPS supplies independent position information.</p></div><div><h3>Stability</h3><p>Power, touch input, asynchronous modem events, and UI state all have to remain predictable during actual portable use.</p></div></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Development</p><h2>Integration mattered more than any single module.</h2></div>
+<div class="process-list"><div class="process-row"><span>01</span><div><h3>Module bring-up</h3><p>Verify cellular messaging, GPS output, display, touch, and power independently.</p></div></div><div class="process-row"><span>02</span><div><h3>Messaging flow</h3><p>Build sending, receiving, contact/conversation presentation, and notification behavior.</p></div></div><div class="process-row"><span>03</span><div><h3>Location features</h3><p>Parse GPS data and surface navigation or map-link information in a useful form.</p></div></div><div class="process-row"><span>04</span><div><h3>UI refinement</h3><p>Develop the lock screen, messages views, status indicators, and touch calibration.</p></div></div><div class="process-row"><span>05</span><div><h3>Field debugging</h3><p>Resolve duplicated events, startup instability, power issues, and screen-state glitches found in use.</p></div></div></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Gallery plan</p><h2>Photos that will explain the device best.</h2></div><div class="gallery-grid"><div class="media-block "><img src="../assets/images/emer1.jpeg" alt="Emergency Messenger handheld device"></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Open enclosure / wiring</h3><p class="placeholder-file">Suggested file: emergency-open.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">GPS or map-link screen</h3><p class="placeholder-file">Suggested file: emergency-gps.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Cellular modem / electronics close-up</h3><p class="placeholder-file">Suggested file: emergency-modem.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Handheld field-use shot</h3><p class="placeholder-file">Suggested file: emergency-handheld.png</p></div></div></div></section>
+
+<section class="learning"><div class="case-container"><p class="case-kicker">What I learned</p><h2>Field testing turns integration problems into design requirements.</h2><p>The device made it clear that modules working independently is only the beginning. Real use exposes timing, power, network, touch, and interface interactions that bench tests can miss.</p><p>Debugging those interactions became as important as implementing the original features.</p></div></section>
+<section class="next-project"><div class="case-container"><p class="case-kicker">Next project</p><a class="next-link" href="waterstrip-robot.html"><span>Waterstrip Robot</span><strong>Motion, programmed.</strong><span class="next-arrow">→</span></a></div></section>
+</main>
+<footer><span>© 2026 Jaron Christopher Canceran</span><span>Computer Engineering · Hardware · Embedded Systems</span></footer>
+<script src="../script.js"></script>
+</body>
+</html>

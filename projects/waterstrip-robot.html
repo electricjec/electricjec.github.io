@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waterstrip Robot | Jaron Canceran</title>
+<meta name="description" content="Case study of an ATmega328P robotic system using multiple servo motors, hardware timers, and programmed motion sequences.">
+<meta name="author" content="Jaron Canceran">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://electricjec.github.io/projects/waterstrip-robot.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+<header class="site-header"><nav class="navbar"><a href="../index.html" class="brand">Jaron Canceran</a><div class="nav-links"><a href="../index.html#projects">Projects</a><a href="../index.html#pcb">PCB</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div></nav></header>
+<main class="project-page">
+<section class="case-hero"><div class="case-container">
+<a class="case-back" href="../index.html#projects">‹ All projects</a>
+<p class="case-kicker">Robotics · ATmega328P · Motion control</p>
+<h1>Waterstrip Robot</h1>
+<p class="case-lead">A servo-driven robotic mechanism controlled through timer-based firmware and repeatable automated motion sequences.</p>
+<div class="case-tags"><span>ATmega328P</span><span>Servo Control</span><span>Timers</span><span>Embedded C</span><span>Mechanisms</span></div>
+<div class="case-hero-media"><img src="../assets/images/waterstriprobot1.png" alt="Waterstrip Robot project"></div>
+</div></section>
+
+<section class="case-section"><div class="case-container">
+<div class="overview-grid"><div class="case-heading"><p class="case-kicker">Overview</p><h2>Turning precise timing into physical motion.</h2></div><div class="case-copy"><p>The Waterstrip Robot is an ATmega328P-based robotic system built around multiple servo motors and a programmed mechanical sequence.</p><p>Instead of treating the servos as independent actuators, the project focuses on the timing and coordination required to make the complete mechanism behave predictably.</p><p>The work connects low-level microcontroller timers directly to physical movement, making firmware behavior immediately visible in the mechanism.</p></div></div>
+<div class="meta-grid"><div class="meta-item"><span>TYPE</span><strong>Servo-driven robot</strong></div><div class="meta-item"><span>CONTROLLER</span><strong>ATmega328P</strong></div><div class="meta-item"><span>ACTUATION</span><strong>Multiple servos</strong></div><div class="meta-item"><span>CONTROL</span><strong>Hardware timers</strong></div><div class="meta-item"><span>FIRMWARE</span><strong>Embedded C</strong></div><div class="meta-item"><span>FOCUS</span><strong>Sequenced motion</strong></div></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Control system</p><h2>Mechanical motion coordinated by low-level timing.</h2><p class="section-lead">The robot uses an ATmega328P and multiple servos, with timer-driven signals and programmed sequences controlling the mechanism.</p></div>
+<div class="feature-grid"><article class="feature-card"><span class="feature-index">01</span><h3>ATmega328P</h3><p>The controller runs the motion logic directly without relying on a full development board.</p></article><article class="feature-card"><span class="feature-index">02</span><h3>Multi-servo motion</h3><p>Separate servo channels drive different parts of the mechanism in a coordinated sequence.</p></article><article class="feature-card"><span class="feature-index">03</span><h3>Timed sequences</h3><p>Movement is defined as repeatable steps rather than manual one-off positioning.</p></article></div>
+<div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Close-up of gears, servos, and mechanism</h3><p class="placeholder-file">Suggested file: waterstrip-mechanism.png</p></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading"><p class="case-kicker">Firmware</p><h2>Timing is the interface between code and mechanics.</h2><p class="section-lead">Hardware timers generate servo control signals while the main sequence coordinates positions and delays to create repeatable physical behavior.</p></div>
+<div class="copy-grid"><div><h3>Timer-driven outputs</h3><p>Servo control depends on consistent pulse timing, making timer configuration a core part of the firmware rather than a background detail.</p></div><div><h3>Sequence logic</h3><p>Each mechanism movement is broken into controllable stages so the robot can repeat a known cycle.</p></div></div>
+<div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Electronics / controller wiring close-up</h3><p class="placeholder-file">Suggested file: waterstrip-electronics.png</p></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Development</p><h2>Code had to follow the mechanism.</h2></div>
+<div class="process-list"><div class="process-row"><span>01</span><div><h3>Mechanical setup</h3><p>Establish the servo-driven mechanism and physical travel limits.</p></div></div><div class="process-row"><span>02</span><div><h3>Servo characterization</h3><p>Determine usable position ranges before automating the complete motion.</p></div></div><div class="process-row"><span>03</span><div><h3>Timer setup</h3><p>Configure the ATmega timers needed for stable servo pulse generation.</p></div></div><div class="process-row"><span>04</span><div><h3>Sequence programming</h3><p>Combine individual servo moves into an automatic operating sequence.</p></div></div><div class="process-row"><span>05</span><div><h3>Physical tuning</h3><p>Adjust timing and positions based on the behavior of the real mechanism.</p></div></div></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Gallery plan</p><h2>The mechanism deserves the close-ups.</h2></div><div class="gallery-grid"><div class="media-block "><img src="../assets/images/waterstriprobot1.png" alt="Waterstrip Robot"></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Side mechanism view</h3><p class="placeholder-file">Suggested file: waterstrip-side.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Gear / linkage detail</h3><p class="placeholder-file">Suggested file: waterstrip-gears.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Controller PCB or breadboard</h3><p class="placeholder-file">Suggested file: waterstrip-controller.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Robot during motion</h3><p class="placeholder-file">Suggested file: waterstrip-action.png</p></div></div></div></section>
+
+<section class="learning"><div class="case-container"><p class="case-kicker">What I learned</p><h2>Timing becomes tangible when code moves hardware.</h2><p>The project connected timer configuration, pulse generation, state sequencing, and mechanical limits in a very direct way.</p><p>Small software changes could immediately change the physical behavior, which made careful calibration and repeatability central to the design.</p></div></section>
+<section class="next-project"><div class="case-container"><p class="case-kicker">Next project</p><a class="next-link" href="solar-cleaning-robot.html"><span>Solar Cleaning Robot</span><strong>Sweep. Mop. Disinfect.</strong><span class="next-arrow">→</span></a></div></section>
+</main>
+<footer><span>© 2026 Jaron Christopher Canceran</span><span>Computer Engineering · Hardware · Embedded Systems</span></footer>
+<script src="../script.js"></script>
+</body>
+</html>

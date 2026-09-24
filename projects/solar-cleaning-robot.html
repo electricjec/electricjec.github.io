@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Cleaning Robot | Jaron Canceran</title>
+<meta name="description" content="Case study of an Arduino-based cleaning robot combining sweeping, mopping, automatic water dispensing, solar-assisted charging, and ESP32 local web control.">
+<meta name="author" content="Jaron Canceran">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://electricjec.github.io/projects/solar-cleaning-robot.html">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="project.css">
+</head>
+<body>
+<header class="site-header"><nav class="navbar"><a href="../index.html" class="brand">Jaron Canceran</a><div class="nav-links"><a href="../index.html#projects">Projects</a><a href="../index.html#pcb">PCB</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></div></nav></header>
+<main class="project-page">
+<section class="case-hero"><div class="case-container">
+<a class="case-back" href="../index.html#projects">‹ All projects</a>
+<p class="case-kicker">Robotics · Arduino · ESP32</p>
+<h1>Solar Cleaning Robot</h1>
+<p class="case-lead">A mobile cleaning robot combining sweeping, mopping, water dispensing, solar-assisted charging, and local browser control.</p>
+<div class="case-tags"><span>Arduino</span><span>ESP32</span><span>Motor Control</span><span>Solar Charging</span><span>Water Dispensing</span></div>
+<div class="case-hero-media"><img src="../assets/images/solarbot1.png" alt="Solar Cleaning Robot project"></div>
+</div></section>
+
+<section class="case-section"><div class="case-container">
+<div class="overview-grid"><div class="case-heading"><p class="case-kicker">Overview</p><h2>Cleaning functions, motion, power, and wireless control on one platform.</h2></div><div class="case-copy"><p>The Solar Cleaning Robot brings multiple subsystems onto one mobile platform: drive motors, a sweeping mechanism, a mopping mechanism, water dispensing, portable power, and solar-assisted charging.</p><p>An Arduino handles the robot functions while an ESP32 provides a local web interface for simple wireless control.</p><p>The project is primarily an integration challenge: the mechanical cleaning functions, electrical loads, water system, power architecture, and controls all need to work together on a moving chassis.</p></div></div>
+<div class="meta-grid"><div class="meta-item"><span>TYPE</span><strong>Mobile cleaning robot</strong></div><div class="meta-item"><span>CONTROLLER</span><strong>Arduino + ESP32</strong></div><div class="meta-item"><span>CLEANING</span><strong>Sweep + mop</strong></div><div class="meta-item"><span>FLUID</span><strong>Automatic water dispensing</strong></div><div class="meta-item"><span>POWER</span><strong>Solar-assisted charging</strong></div><div class="meta-item"><span>CONTROL</span><strong>Local web interface</strong></div></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Cleaning system</p><h2>One mobile platform, several physical cleaning functions.</h2><p class="section-lead">The robot combines sweeping, mopping, controlled water dispensing, drive motors, and solar-assisted power into one prototype.</p></div>
+<div class="feature-grid"><article class="feature-card"><span class="feature-index">01</span><h3>Sweep + mop</h3><p>The mechanical platform combines dry debris collection with a separate mopping function.</p></article><article class="feature-card"><span class="feature-index">02</span><h3>Water dispensing</h3><p>A controlled water system supports mop wetting and disinfection during operation.</p></article><article class="feature-card"><span class="feature-index">03</span><h3>Solar-assisted power</h3><p>A solar panel supplements the robot’s portable charging and power architecture.</p></article></div>
+<div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Front cleaning mechanism close-up</h3><p class="placeholder-file">Suggested file: solarbot-cleaner.png</p></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading"><p class="case-kicker">Control</p><h2>Embedded control on the robot, simple control from a browser.</h2><p class="section-lead">Arduino handles the core robot behavior while an ESP32 hosts a local webpage for wireless on/off control.</p></div>
+<div class="media-pair"><div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">ESP32 local web control screen</h3><p class="placeholder-file">Suggested file: solarbot-web-ui.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Electronics / motor control close-up</h3><p class="placeholder-file">Suggested file: solarbot-electronics.png</p></div></div>
+<div class="copy-grid"><div><h3>Local web interface</h3><p>The ESP32 provides a lightweight browser-accessible control surface without requiring a dedicated mobile app.</p></div><div><h3>Motor and actuator control</h3><p>The embedded system coordinates drive motion, the cleaning mechanisms, and the water-dispensing hardware.</p></div></div>
+</div></section>
+
+<section class="case-section dark"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Power</p><h2>The solar panel is part of the energy system, not decoration.</h2><p class="section-lead">The project explores solar-assisted charging alongside the battery-powered robot rather than assuming the panel alone can supply every load continuously.</p></div>
+<div class="media-placeholder dark-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Solar panel + battery / charging hardware</h3><p class="placeholder-file">Suggested file: solarbot-power.png</p></div>
+</div></section>
+
+<section class="case-section soft"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Development</p><h2>Mechanical systems and electronics had to be tested together.</h2></div>
+<div class="process-list"><div class="process-row"><span>01</span><div><h3>Mobile base</h3><p>Establish drive motors, chassis, and room for cleaning hardware.</p></div></div><div class="process-row"><span>02</span><div><h3>Cleaning mechanisms</h3><p>Integrate sweeping and mopping components with the moving platform.</p></div></div><div class="process-row"><span>03</span><div><h3>Water system</h3><p>Add controlled dispensing for mop wetting and disinfection.</p></div></div><div class="process-row"><span>04</span><div><h3>Wireless control</h3><p>Host a local ESP32 webpage for simple start/stop control.</p></div></div><div class="process-row"><span>05</span><div><h3>Power integration</h3><p>Combine the battery system with solar-assisted charging and real motor loads.</p></div></div></div>
+</div></section>
+
+<section class="case-section"><div class="case-container"><div class="case-heading center"><p class="case-kicker">Gallery plan</p><h2>Show the mechanisms, not just the finished robot.</h2></div><div class="gallery-grid"><div class="media-block "><img src="../assets/images/solarbot1.png" alt="Solar Cleaning Robot"></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Sweeping roller close-up</h3><p class="placeholder-file">Suggested file: solarbot-sweeper.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Mop and water outlet</h3><p class="placeholder-file">Suggested file: solarbot-mop.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Solar / battery wiring</h3><p class="placeholder-file">Suggested file: solarbot-wiring.png</p></div> <div class="media-placeholder"><span class="placeholder-label">Image slot</span><h3 class="placeholder-title">Robot during cleaning test</h3><p class="placeholder-file">Suggested file: solarbot-action.png</p></div></div></div></section>
+
+<section class="learning"><div class="case-container"><p class="case-kicker">What I learned</p><h2>Robotics is systems integration in motion.</h2><p>The project emphasized that a robot can only be as reliable as the interaction between its mechanical, electrical, power, and control subsystems.</p><p>It also showed the value of keeping the user-facing control layer simple even when the hardware underneath is doing several things at once.</p></div></section>
+<section class="next-project"><div class="case-container"><p class="case-kicker">Next project</p><a class="next-link" href="antiparallel.html"><span>ANTIPARALLEL</span><strong>Analog heart. Digital awareness.</strong><span class="next-arrow">→</span></a></div></section>
+</main>
+<footer><span>© 2026 Jaron Christopher Canceran</span><span>Computer Engineering · Hardware · Embedded Systems</span></footer>
+<script src="../script.js"></script>
+</body>
+</html>
